@@ -8,7 +8,7 @@ module.exports.findAllJokes = (req, res) => {
 
 module.exports.findRandomJoke = (req, res) => {
     Joke.find().where('random').near([Math.random(), Math.random()])
-        .then(allJokes => res.json({ jokes: allJokes }))
+        .then(oneJoke => res.json({ joke: oneJoke }))
         .catch(err => res.json({ message: "!ERROR!:", error: err }));
 };
 
