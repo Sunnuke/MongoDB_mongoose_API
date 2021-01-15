@@ -1,0 +1,25 @@
+{
+  "name": "MongoDB_mongoose_API",
+  "version": "1.0.0",
+  "description": "Practicing the use of MongoDB server with mongoose interface to create an interactive API. Will be preforming API interactions with Postman.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunnuke/MongoDB_mongoose_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunnuke/MongoDB_mongoose_API/issues"
+  },
+  "homepage": "https://github.com/Sunnuke/MongoDB_mongoose_API#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12"
+  }
+}
