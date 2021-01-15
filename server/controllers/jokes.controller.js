@@ -1,5 +1,6 @@
 const Joke = require("../models/jokes.model");
 
+
 module.exports.findAllJokes = (req, res) => {
     Joke.find()
         .then(allJokes => res.json({ jokes: allJokes }))
@@ -7,8 +8,8 @@ module.exports.findAllJokes = (req, res) => {
 };
 
 module.exports.findRandomJoke = (req, res) => {
-    Joke.find().where('random').near([Math.random(), Math.random()])
-        .then(oneJoke => res.json({ joke: oneJoke }))
+    Joke.find()
+        .then(oneJoke => res.json({ joke: oneJoke[ Math.floor( Math.random() * Math.floor( oneJoke.length ) ) ] } ) )
         .catch(err => res.json({ message: "!ERROR!:", error: err }));
 };
 

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Sunnuke/MongoDB_mongoose_API#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.11.12"
+    "mongoose": "^5.11.12",
+    "mongoose-random": "^0.1.1"
   }
 }

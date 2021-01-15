@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 
-
 const JokeSchema = new mongoose.Schema(
     {
         setup: {
@@ -18,7 +17,7 @@ const JokeSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-
 const Joke = mongoose.model("Joke", JokeSchema);
+
 
 module.exports = Joke;
