@@ -4,7 +4,13 @@ module.exports.findAllJokes = (req, res) => {
     Joke.find()
         .then(allJokes => res.json({ jokes: allJokes }))
         .catch(err => res.json({ message: "!ERROR!:", error: err }));
-}
+};
+
+module.exports.findRandomJoke = (req, res) => {
+    Joke.find().where('random').near([Math.random(), Math.random()])
+        .then(allJokes => res.json({ jokes: allJokes }))
+        .catch(err => res.json({ message: "!ERROR!:", error: err }));
+};
 
 module.exports.findOneJoke = (req, res) => {
     Joke.findOne({ _id: req.params.id })
